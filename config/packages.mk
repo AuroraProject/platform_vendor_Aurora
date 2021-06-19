@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     rsync \
     unrar \
     vim \
-    wget \
     zip
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
