@@ -67,3 +67,7 @@ endif
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
+
+# Navbar
+PRODUCT_PACKAGES += \
+    NavigationBarNoHintOverlay
