@@ -114,3 +114,7 @@ include vendor/aurora/config/aosp_audio.mk
 include vendor/aurora/config/aurora_audio.mk
 include vendor/aurora/config/packages.mk
 include vendor/aurora/config/version.mk
+
+# Include auroraUI
+include vendor/aurora/config.mk
+
