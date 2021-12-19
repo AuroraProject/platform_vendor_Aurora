@@ -118,3 +118,8 @@ include vendor/aurora/config/version.mk
 # Include auroraUI
 include vendor/aurora/config.mk
 
+# GApps Flag
+ifeq ($(WITH_GAPPS), true)
+# Call Gapps
+$(call inherit-product, vendor/gms/products/gms.mk)
+endif #WITH_GAPPS
