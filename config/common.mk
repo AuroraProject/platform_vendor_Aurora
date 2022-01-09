@@ -121,7 +121,7 @@ include vendor/aurora/config/packages.mk
 include vendor/aurora/config/version.mk
 
 # Include auroraUI
-include vendor/aurora/config.mk
+include vendor/auroraui/config.mk
 
 # GApps Flag
 ifeq ($(WITH_GAPPS), true)
