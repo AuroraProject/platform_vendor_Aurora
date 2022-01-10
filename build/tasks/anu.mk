@@ -15,8 +15,8 @@
 AURORA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(AURORA_BUILD_VERSION).zip
 MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
 
-.PHONY: carthage
-carthage: $(INTERNAL_OTA_PACKAGE_TARGET)
+.PHONY: anu
+anu: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(AURORA_TARGET_PACKAGE)
 	$(hide) $(MD5) $(AURORA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(AURORA_TARGET_PACKAGE).md5sum
 	@echo "Build Done"
