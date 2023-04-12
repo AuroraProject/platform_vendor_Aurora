@@ -171,7 +171,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/aurora/overlay/common \
+    vendor/aurora/overlay/common
 
 PRODUCT_PACKAGES += \
     NetworkStackOverlay \
@@ -180,6 +180,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/aurora/build/target/product/security/aurora
 
+# Themepicker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 include vendor/aurora/config/version.mk
 include vendor/aurora/config/bootanimation.mk
 include vendor/aurora/config/telephony.mk
+include vendor/aurora/config/fonts.mk
