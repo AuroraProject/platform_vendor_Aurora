@@ -6,9 +6,6 @@ endif
 
 # Aurora System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.aurora.version=$(AURORA_VERSION) \
-    ro.aurora.releasetype=$(AURORA_BUILDTYPE) \
-    ro.aurora.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(AURORA_VERSION) \
 
 # Aurora Platform Display Version

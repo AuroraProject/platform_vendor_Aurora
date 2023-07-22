@@ -16,9 +16,11 @@
 # -----------------------------------------------------------------
 # Lineage OTA update package
 
-ifeq ($(AURORA_ZIP_TYPE), Gapps)
-	AFTERLIFE_TARGET_PACKAGE := $(PRODUCT_OUT)/aurora-$(AURORA_VERSION)-Gapps.zip
-else 
+Aifeq ($(AURORA_ZIP_TYPE), Gapps)
+AURORA_TARGET_PACKAGE := $(PRODUCT_OUT)/aurora-$(AURORA_VERSION)-Gapps.zip
+else
+AURORA_TARGET_PACKAGE := $(PRODUCT_OUT)/aurora-$(AURORA_VERSION)-Vanilla.zip
+endif
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
