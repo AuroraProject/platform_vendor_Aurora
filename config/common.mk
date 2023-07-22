@@ -89,6 +89,10 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(AURORA_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
+# Aperture
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
