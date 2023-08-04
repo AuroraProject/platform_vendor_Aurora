@@ -9,8 +9,8 @@ AURORA_ZIP_TYPE := Vanilla
 
 # Gapps
 ifeq ($(AURORA_GAPPS), true)
-    $(call inherit-product, vendor/gms/gms_full.mk)
-    AURORA_ZIP_TYPE := FullGapps
+    $(call inherit-product, vendor/gms/products/gms.mk)
+    AURORA_ZIP_TYPE := Gapps
 endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
