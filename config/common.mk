@@ -205,7 +205,12 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 PRODUCT_PACKAGES += \
     ThemePicker
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
+# Versioning
 include vendor/aurora/config/version.mk
+
 include vendor/aurora/config/bootanimation.mk
 include vendor/aurora/config/telephony.mk
 include vendor/aurora/config/fonts.mk
