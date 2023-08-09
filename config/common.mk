@@ -213,4 +213,3 @@ include vendor/aurora/config/version.mk
 
 include vendor/aurora/config/bootanimation.mk
 include vendor/aurora/config/telephony.mk
-include vendor/aurora/config/fonts.mk
