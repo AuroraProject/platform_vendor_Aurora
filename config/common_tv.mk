@@ -1,5 +1,5 @@
-# Inherit some common sosp stuff.
-$(call inherit-product, vendor/sosp/config/common.mk)
+# Inherit some common aurora stuff.
+$(call inherit-product, vendor/aurora/config/common.mk)
 
 # AOSP packages
 PRODUCT_PACKAGES += \

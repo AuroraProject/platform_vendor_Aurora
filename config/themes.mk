@@ -16,7 +16,7 @@
 PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub \
-    SospBlackTheme
+    AuroraBlackTheme
     
     
 # Include {Lato,Rubik} fonts
@@ -62,4 +62,4 @@ PRODUCT_PACKAGES += \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
-    SospNavigationBarNoHint
+    AuroraNavigationBarNoHint

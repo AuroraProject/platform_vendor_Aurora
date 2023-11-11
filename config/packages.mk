@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk \
     SoundRecorder \
-    SospSettings \
+    AuroraSettings \
     Recorder
 
 # Config

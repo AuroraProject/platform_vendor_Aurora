@@ -17,10 +17,10 @@
 $(call project-set-path-variant,ril,TARGET_RIL_VARIANT,hardware/ril)
 
 # Include board/platform macros
-include vendor/sosp/build/core/utils.mk
+include vendor/aurora/build/core/utils.mk
 
 # Include vendor platform definitions
-include vendor/sosp/build/core/vendor/*.mk
+include vendor/aurora/build/core/vendor/*.mk
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/sosp/build/core/qcom_target.mk
+include $(TOPDIR)vendor/aurora/build/core/qcom_target.mk

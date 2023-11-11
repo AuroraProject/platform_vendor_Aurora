@@ -27,7 +27,7 @@ import (
 )
 
 func init() {
-	android.RegisterModuleType("sosp_generator", GeneratorFactory)
+	android.RegisterModuleType("aurora_generator", GeneratorFactory)
 }
 
 var String = proptools.String
@@ -209,12 +209,12 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	if depRoot == "" {
 		depRoot = ctx.ModuleDir()
 	} else {
-		depRoot = sospExpandVariables(ctx, depRoot)
+		depRoot = auroraExpandVariables(ctx, depRoot)
 	}
 
 	// Glob dep_files property
 	for _, dep_file := range g.properties.Dep_files {
-		dep_file = sospExpandVariables(ctx, dep_file)
+		dep_file = auroraExpandVariables(ctx, dep_file)
 		globPath := filepath.Join(depRoot, dep_file)
 		paths, err := ctx.GlobWithDeps(globPath, nil)
 		if err != nil {
@@ -226,7 +226,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		}
 	}
 
-	cmd := sospExpandVariables(ctx, String(g.properties.Cmd))
+	cmd := auroraExpandVariables(ctx, String(g.properties.Cmd))
 
 	rawCommand, err := android.Expand(cmd, func(name string) (string, error) {
 		switch name {

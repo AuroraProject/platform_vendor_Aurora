@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func sospExpandVariables(ctx android.ModuleContext, in string) string {
-	sospVars := ctx.Config().VendorConfig("sospVarsPlugin")
+func auroraExpandVariables(ctx android.ModuleContext, in string) string {
+	auroraVars := ctx.Config().VendorConfig("auroraVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if sospVars.IsSet(name) {
-			return sospVars.String(name), nil
+		if auroraVars.IsSet(name) {
+			return auroraVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

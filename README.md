@@ -1,2 +1,2 @@
-SOSP Project Vendor
+AURORA Project Vendor
 -------------------

@@ -20,7 +20,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-SOSP_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
+AURORA_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_BUILD_PROP_OVERRIDES := BUILD_DISPLAY_ID=$(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(BUILD_ID)
 
@@ -32,7 +32,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.mode=OPTIONAL
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    org.sosp.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(SOSP_BUILD_DATE) \
+    org.aurora.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(AURORA_BUILD_DATE) \
     persist.sys.disable_rescue=true \
     net.tethering.noprovisioning=true \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml

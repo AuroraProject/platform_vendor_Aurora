@@ -14,20 +14,20 @@
 
 # APN
 PRODUCT_COPY_FILES += \
-    vendor/sosp/prebuilt/common/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
+    vendor/aurora/prebuilt/common/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
 
 # AR
 PRODUCT_COPY_FILES += \
-    vendor/sosp/prebuilt/common/etc/calibration_cad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/calibration_cad.xml
+    vendor/aurora/prebuilt/common/etc/calibration_cad.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/calibration_cad.xml
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/sosp/prebuilt/common/bin/50-sosp.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-sosp.sh \
-    vendor/sosp/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
-    vendor/sosp/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions
+    vendor/aurora/prebuilt/common/bin/50-aurora.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-aurora.sh \
+    vendor/aurora/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.sh \
+    vendor/aurora/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool.functions
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/addon.d/50-sosp.sh
+    system/addon.d/50-aurora.sh
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool.sh \
@@ -35,7 +35,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
         
 # Device Common Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/sosp/overlay/common
+    vendor/aurora/overlay/common
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -61,7 +61,7 @@ endif
 
 # Priv-app config
 PRODUCT_COPY_FILES += \
-    vendor/sosp/config/permissions/privapp-permissions-sosp.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-sosp.xml
+    vendor/aurora/config/permissions/privapp-permissions-aurora.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-aurora.xml
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -76,13 +76,13 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Init.d script support
 PRODUCT_COPY_FILES += \
-    vendor/sosp/prebuilt/common/etc/init/init.sosp-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.sosp-system_ext.rc \
-    vendor/sosp/prebuilt/common/etc/init/init.sosp-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.sosp-updater.rc \
-    vendor/sosp/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
+    vendor/aurora/prebuilt/common/etc/init/init.aurora-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.aurora-system_ext.rc \
+    vendor/aurora/prebuilt/common/etc/init/init.aurora-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.aurora-updater.rc \
+    vendor/aurora/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
       
 # System mount
 PRODUCT_COPY_FILES += \
-    vendor/sosp/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
+    vendor/aurora/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -96,16 +96,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
         
 # Boot animations
-include vendor/sosp/config/bootanimation.mk
+include vendor/aurora/config/bootanimation.mk
 
 # Packages
-include vendor/sosp/config/packages.mk
+include vendor/aurora/config/packages.mk
 
 # Props
-include vendor/sosp/config/props.mk
+include vendor/aurora/config/props.mk
 
 # Sounds
-include vendor/sosp/config/sounds.mk
+include vendor/aurora/config/sounds.mk
 
 # SOSP Themes
-include vendor/sosp/config/themes.mk
+include vendor/aurora/config/themes.mk
