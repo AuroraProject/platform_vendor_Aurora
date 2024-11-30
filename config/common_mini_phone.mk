@@ -1,4 +1,4 @@
-# Inherit mobile mini common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile_mini.mk)
+# Inherit mobile mini common Aurora stuff
+$(call inherit-product, vendor/aurora/config/common_mobile_mini.mk)
 
-$(call inherit-product, vendor/lineage/config/telephony.mk)
+$(call inherit-product, vendor/aurora/config/telephony.mk)

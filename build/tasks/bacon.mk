@@ -14,16 +14,16 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Aurora OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+AURORA_TARGET_PACKAGE := $(PRODUCT_OUT)/aurora-$(AURORA_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
-$(LINEAGE_TARGET_PACKAGE): $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+$(AURORA_TARGET_PACKAGE): $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(AURORA_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(AURORA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(AURORA_TARGET_PACKAGE).sha256sum
+	@echo "Package Complete: $(AURORA_TARGET_PACKAGE)" >&2
 
 .PHONY: bacon
-bacon: $(LINEAGE_TARGET_PACKAGE) $(DEFAULT_GOAL)
+bacon: $(AURORA_TARGET_PACKAGE) $(DEFAULT_GOAL)
